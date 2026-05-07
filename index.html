@@ -6,18 +6,19 @@
   <title>Chess</title>
   <style>
     :root {
-      --bg: #f6f5f2;
-      --fg: #1f2330;
-      --muted: #6b7280;
-      --light: #f0d9b5;
-      --dark: #b58863;
-      --selected: rgba(50, 180, 100, 0.55);
-      --last: rgba(245, 215, 60, 0.45);
-      --check: rgba(220, 60, 60, 0.65);
-      --dot: rgba(0, 0, 0, 0.28);
+      --bg: #fdf4fb;
+      --fg: #2a1638;
+      --muted: #7a5b8a;
+      --light: #fbd5ec;
+      --dark: #8b4ca8;
+      --border: #4a1f6b;
+      --selected: rgba(255, 105, 180, 0.55);
+      --last: rgba(255, 200, 230, 0.55);
+      --check: rgba(220, 60, 100, 0.65);
+      --dot: rgba(74, 31, 107, 0.45);
       --panel: #ffffff;
-      --line: #e2e3e8;
-      --accent: #2563eb;
+      --line: #efd7ea;
+      --accent: #b144cf;
     }
 
     * { box-sizing: border-box; }
@@ -66,7 +67,7 @@
       border-radius: 999px;
       cursor: pointer;
     }
-    .new-game:hover { background: #f0f1f5; }
+    .new-game:hover { background: #fbe4f2; }
 
     main {
       display: grid;
@@ -90,7 +91,7 @@
       grid-template-columns: repeat(8, 1fr);
       width: 100%;
       aspect-ratio: 1 / 1;
-      border: 2px solid #6f4a2a;
+      border: 2px solid var(--border);
       border-radius: 4px;
       overflow: hidden;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -155,9 +156,9 @@
       pointer-events: none;
     }
     .square.light .file-label,
-    .square.light .rank-label { color: rgba(120, 80, 40, 0.7); }
+    .square.light .rank-label { color: rgba(120, 60, 140, 0.75); }
     .square.dark .file-label,
-    .square.dark .rank-label { color: rgba(255, 240, 215, 0.85); }
+    .square.dark .rank-label { color: rgba(255, 220, 240, 0.9); }
     .square .file-label { right: 4px; bottom: 2px; }
     .square .rank-label { left: 4px; top: 2px; }
 
@@ -194,7 +195,7 @@
       cursor: pointer;
       line-height: 1;
     }
-    .promo-buttons button:hover { background: #ecedf0; }
+    .promo-buttons button:hover { background: #f7d5ea; }
 
     .rules {
       background: var(--panel);
